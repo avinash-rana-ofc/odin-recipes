@@ -24,6 +24,12 @@ export default [
       'react-refresh': reactRefresh,
     },
     rules: {
+      // to turn off warnings of props not used
+      "react/prop-types": "off",
+      "compilerOptions": {
+        "noUnusedLocals": false,
+        "noUnusedParameters": false
+      },
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
@@ -33,6 +39,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      
     },
   },
+  
 ]

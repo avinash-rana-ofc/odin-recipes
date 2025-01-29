@@ -1,4 +1,8 @@
 // function List(props){
+
+import Todo from "./Todo";
+import Button from "./Button"
+
   
 //   return(
 //   <>
@@ -33,12 +37,31 @@ function App() {
 
   
   const animals = ["Lion", "tiger", "monkey", "cheetah", "giraffe"];
+
   //const animals = [];
+  // const handleButtonClick = () => {
+  //   window.location.href = "https://www.google.com";
+  // }
+
+
+  //customizing to handle dynamic url
+  const handleButtonClick = (url) => {
+    window.location.href = url;
+  }
 
   return (
     <div>
     <h1>Animal</h1>
       <List  animals={animals}/>
+      <Todo />
+      {/* <Button /> */}
+      {/* <Button />
+      <Button color="blue" fontSize="12" text="Help Me"/>
+      <Button color="green" fontSize="24" text="Test Me"/>
+      <Button fontSize="20" />
+      <Button handleClick = {handleButtonClick} text="Go to google"/> */}
+      {/*handling customize links*/}
+      <Button handleClick={() => handleButtonClick("www.odinproject.com")} />
     </div>
   )
 }
